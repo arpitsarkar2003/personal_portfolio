@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Zilla_Slab } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from 'next-themes'
 
 const roboto = Zilla_Slab({
   subsets: ['latin'],
@@ -19,7 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+           <body className={roboto.className}>{children}</body>
+
     </html>
   );
 }
