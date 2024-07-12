@@ -13,7 +13,7 @@ const HomeContent: React.FC = () => {
 
     return (
         <div className="home-content-container">
-            <div className="text-5xl mt-4">
+            <div className="lg:text-5xl text-2xl mt-4">
                 <span className='font-mono'>{currentText}</span>
                 <span className="blinking-cursor">_</span>
             </div>

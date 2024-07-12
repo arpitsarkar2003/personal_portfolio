@@ -1,6 +1,6 @@
 const Navbar = () => {
     return ( 
-        <div className="">
+        <div className="hidden lg:block">
             <div className="space-y-5">
                 <div className="texto rotate-180 group underline">
                 <a href="#Header">Home</a>
