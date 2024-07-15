@@ -15,7 +15,7 @@ export default function Home() {
       </div>
 
       {/* about */}
-      <div id="About" className="h-[90vh] border-b dark:border-white">
+      <div id="About" className="h-[95vh] border-b dark:border-white">
         <div><About /></div>
       </div>
 
