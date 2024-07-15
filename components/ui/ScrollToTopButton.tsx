@@ -13,7 +13,7 @@ const ScrollToTopButton = () => {
 
     return (
         <button 
-            className="fixed bottom-10 right-10"
+            className="fixed bottom-12 right-[50%] hover:scale-110 transition-all duration-200 hover:bg-slate-50 rounded-full"
             onClick={handleScrollToTop}
             title='Scroll to top'
         >
@@ -22,6 +22,7 @@ const ScrollToTopButton = () => {
                 alt="Scroll to top"
                 width={50}
                 height={50}
+                className='rounded-full'
             />
         </button>
     );

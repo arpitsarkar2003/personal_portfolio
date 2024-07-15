@@ -1,25 +1,25 @@
+"use client";
+
 import { motion } from "framer-motion"
 
-
-const Header = () => {
+const Footer = () => {
     return ( 
         <div className="flex justify-between items-center">
             <motion.div
             animate={{ x: 100 }}
             transition={{ type: "spring", stiffness: 100 }}
             >
-                <h1 className="text-[36px] font-[700]">arpit.</h1>
+                <a href="/" className="text-[36px] font-[700] cursor-help">arpit.</a>
             </motion.div>
             <motion.div
             animate={{ x: -50 }}
             transition={{ type: "spring", stiffness: 100 }}
-            className="group">
-                <a href="/Resume.pdf"
-                download="Arpit_Sarkar_Resume.pdf" className="font-[500]">hire me.</a>
+            className="group cursor-default">
+                <h1 className="font-[300]">crafted by <span className="font-[700]">me.</span></h1>
                 <div className="w-[20px] h-[2px] dark:border-white border border-black group-hover:w-full transition-all duration-200" />
             </motion.div>
         </div>
      );
 }
  
-export default Header;
+export default Footer;
