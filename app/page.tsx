@@ -1,3 +1,4 @@
+
 import Header from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
@@ -10,23 +11,23 @@ export default function Home() {
     <div className="border-t-4 border-black dark:border-white dark:bg-darkBackground">
 
       {/* header */}
-      <div id="Header" className="h-[90vh] border-b dark:border-white">
+      <div id="Header" className="md:h-[90vh] md:pb-0 pb-10 border-b dark:border-white">
         <div><Header /></div>
       </div>
 
       {/* about */}
-      <div id="About" className="h-[95vh] border-b dark:border-white">
+      <div id="About" className="md:pb-20 pb-10 border-b dark:border-white">
         <div><About /></div>
       </div>
 
       {/* Projects */}
-      <div id="Projects" className="h-[90vh] border-b dark:border-white">
+      <div id="Projects" className="md:pb-20 pb-10 border-b dark:border-white">
         <div><Projects /></div>
       </div>
 
 
       {/* contact */}
-      <div id="Contact" className="h-[70vh]">
+      <div id="Contact" className="md:h-[70vh] md:pb-0 pb-10">
         <div><Contact /></div>
       </div>
 

@@ -13,7 +13,7 @@ const ScrollToTopButton = () => {
 
     return (
         <button 
-            className="fixed bottom-12 right-[50%] hover:scale-110 transition-all duration-200 hover:bg-slate-50 rounded-full"
+            className="fixed hidden md:block bottom-12 right-[48.5%] hover:scale-110 transition-all duration-200 hover:bg-gray-50 rounded-full"
             onClick={handleScrollToTop}
             title='Scroll to top'
         >

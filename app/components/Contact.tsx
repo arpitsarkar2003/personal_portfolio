@@ -22,16 +22,16 @@ const Contact = () => {
 
                 <div className="grid grid-cols-2 md:grid-cols-6 gap-[7rem] mt-10">
                     <div>
-                    <a href="https://www.instagram.com/arpitsarkar16/"><BsInstagram size={30}/></a>
+                    <a href="https://www.instagram.com/arpitsarkar16/" target="_blank"><BsInstagram size={30}/></a>
                     </div>
                     <div>
-                    <a href="https://www.linkedin.com/in/arpitsarkar07/"><BsLinkedin size={30}/></a>
+                    <a href="https://www.linkedin.com/in/arpitsarkar07/" target="_blank"><BsLinkedin size={30}/></a>
                     </div>
                     <div>
-                    <a href="https://github.com/arpitsarkar2003"><BsGithub size={30}/></a>
+                    <a href="https://github.com/arpitsarkar2003" target="_blank"><BsGithub size={30}/></a>
                     </div>
                     <div>
-                    <a href="https://www.facebook.com/arpit.sarkar.988/"><BsFacebook size={30}/></a>
+                    <a href="https://www.facebook.com/arpit.sarkar.988/" target="_blank"><BsFacebook size={30}/></a>
                     </div>
                     <div>
                     <a href="mailto:YfTqM@example.com"><MdEmail size={30}/></a>
