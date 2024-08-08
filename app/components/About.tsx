@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Linkedin } from 'lucide-react';
 import { Github } from 'lucide-react';
 import { Instagram } from 'lucide-react';
+import { Paperclip } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 
@@ -20,8 +21,8 @@ const About = () => {
                     <div className="w-[20px] h-[2px] dark:border-white border-2 border-black group-hover:w-full transition-all duration-200" />
                 </motion.div>
                 <div className="group block md:hidden pb-10">
-                <h1 className="text-[36px] font-[700]">about me.</h1>
-                <div className="w-[20px] h-[2px] dark:border-white border-2 border-black group-hover:w-full transition-all duration-200" />
+                    <h1 className="text-[36px] font-[700]">about me.</h1>
+                    <div className="w-[20px] h-[2px] dark:border-white border-2 border-black group-hover:w-full transition-all duration-200" />
                 </div>
             </div>
 
@@ -36,20 +37,27 @@ const About = () => {
                         As a Front-End Web Developer, I excel in creating stunning, responsive websites using HTML, CSS (especially Tailwind CSS), and JavaScript/React.js for dynamic interfaces. I also handle backend tasks with MongoDB/Express and excel in API integration. My toolkit includes advanced tools like Firebase, Redux, and Material UI/Icons for high-performance web apps.
                     </p>
                     <div className="flex space-x-3 items-center ">
+                         
+                            <form method="get" action="Resume.pdf" className="flex items-center justify-center space-x-1 cursor-pointer border px-3 py-[7px] rounded-md hover:bg-gray-100 transition-all duration-150">
+                            <Paperclip className="w-6 h-6" />
+                            <button type="submit" >Resume</button>
+                        </form>
+                         
+                        
                         <Button variant="outline">
-                            <a href="https://www.linkedin.com/in/arpitsarkar07/" target="_blank" className="flex items-center space-x-1">
+                            <a href="https://www.linkedin.com/in/arpitsarkar07/" target="_blank" className="flex items-center justify-center space-x-1">
                                 <Linkedin />
                                 <span>Linkden</span>
                             </a>
                         </Button>
                         <Button variant="outline">
-                            <a href="https://github.com/arpitsarkar2003" target="_blank" className="flex items-center space-x-1">
+                            <a href="https://github.com/arpitsarkar2003" target="_blank" className="flex items-center justify-center space-x-1">
                                 <Github />
                                 <span>Github</span>
                             </a>
                         </Button>
                         <Button variant="outline">
-                            <a href="https://www.instagram.com/arpitsarkar16/" target="_blank" className="flex items-center space-x-1">
+                            <a href="https://www.instagram.com/arpitsarkar16/" target="_blank" className="flex items-center justify-center space-x-1">
                                 <Instagram />
                                 <span>Instagram</span>
                             </a>
@@ -69,7 +77,11 @@ const About = () => {
                     <p className="text-wrap text-base font-[300]">
                         As a Front-End Web Developer, I excel in creating stunning, responsive websites using HTML, CSS (especially Tailwind CSS), and JavaScript/React.js for dynamic interfaces. I also handle backend tasks with MongoDB/Express and excel in API integration. My toolkit includes advanced tools like Firebase, Redux, and Material UI/Icons for high-performance web apps.
                     </p>
-                    <div className="items-center pt-10 flex space-x-1">
+                    <div className="items-center pt-10 space-x-1 grid grid-cols-2 gap-3 mx-5">
+                    <form method="get" action="Resume.pdf" className="flex items-center justify-center space-x-1 cursor-pointer border px-3 py-[7px] rounded-md hover:bg-gray-100 transition-all duration-150">
+                            <Paperclip className="w-6 h-6" />
+                            <button type="submit" >Resume</button>
+                        </form>
                         <Button variant="outline">
                             <a href="https://www.linkedin.com/in/arpitsarkar07/" target="_blank" className="flex items-center space-x-1">
                                 <Linkedin />
@@ -119,19 +131,19 @@ const About = () => {
 
             <div className="md:hidden flex flex-col p-5 space-y-5  justify-between md:mx-[20%] mt-10">
                 <div className="bg-gray-100 flex border  dark:bg-white/70 dark:text-black border-gray-100 rounded-md hover:bg-gray-50 hover:shadow-sm cursor-default py-1 px-3 space-x-2">
-                    <img src="1.svg" alt="Engineering"/>
+                    <img src="1.svg" alt="Engineering" />
                     <div className="border-l-2 pl-2 border-gray-500">
                         <h1>Designer</h1>
                     </div>
                 </div>
                 <div className="bg-gray-100 flex border dark:bg-white/70 dark:text-black border-gray-100 rounded-md hover:bg-gray-50 hover:shadow-sm cursor-default py-1 px-3 space-x-2">
-                    <img src="2.svg" alt="Engineering"/>
+                    <img src="2.svg" alt="Engineering" />
                     <div className="border-l-2 pl-2 border-gray-500">
                         <h1>Engineering</h1>
                     </div>
                 </div>
                 <div className="bg-gray-100 flex border dark:bg-white/70 dark:text-black border-gray-100 rounded-md hover:bg-gray-50 hover:shadow-sm cursor-default py-1 px-3 space-x-2">
-                    <img src="3.svg" alt="Engineering"/>
+                    <img src="3.svg" alt="Engineering" />
                     <div className="border-l-2 pl-2 border-gray-500">
                         <h1>Project Management</h1>
                     </div>

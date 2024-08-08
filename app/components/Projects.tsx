@@ -133,10 +133,13 @@ const Projects = () => {
 
     return (
         <div className="mx-4 md:mx-20 pt-16">
-            <div className="group w-full md:w-[10%]">
+            <div className="flex justify-end ">
+                <div className="group w-full md:w-[10%]">
                 <h1 className="text-[36px] font-[700]">projects.</h1>
                 <div className="w-[20px] h-[2px] dark:border-white border-2 border-black group-hover:w-full transition-all duration-200" />
             </div>
+            </div>
+            
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-20">
                 <AnimatePresence>

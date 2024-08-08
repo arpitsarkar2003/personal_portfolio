@@ -5,6 +5,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
 import Footer from "./components/Footer";
+import Work from "./components/Work";
 
 export default function Home() {
   return (
@@ -18,6 +19,10 @@ export default function Home() {
       {/* about */}
       <div id="About" className="md:pb-20 pb-10 border-b dark:border-white">
         <div><About /></div>
+      </div>
+
+      <div id="Work" className="md:pb-20 pb-10 border-b dark:border-white">
+        <div><Work /></div>
       </div>
 
       {/* Projects */}

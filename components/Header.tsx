@@ -15,7 +15,7 @@ const Header = () => {
                     animate={{ x: -50 }}
                     transition={{ type: "spring", stiffness: 100 }}
                     className="group">
-                    <a href="https://docs.google.com/document/d/e/2PACX-1vQe00vQxnN1MMETupmsvZACvQ9vNNz-wMXLD968Tce1tPUO0EvMJEJDwxNy0rnOxCijGinueg1i2SNd/pub"
+                    <a href="https://www.linkedin.com/in/arpitsarkar07/"
                         target="_blank"
                         className="font-[500]">hire me.</a>
                     <div className="w-[20px] h-[2px] dark:border-white border border-black group-hover:w-full transition-all duration-200" />
@@ -32,8 +32,8 @@ const Header = () => {
                     animate={{ x: 20 }}
                     transition={{ type: "spring", stiffness: 100 }}
                     className="group">
-                    <a href="/Resume.pdf"
-                        download="Arpit_Sarkar_Resume.pdf" className="font-[500]">hire me.</a>
+                    <a href="https://www.linkedin.com/in/arpitsarkar07/"
+                        target="_blank" className="font-[500]">hire me.</a>
                     <div className="w-[20px] h-[2px] dark:border-white border border-black group-hover:w-full transition-all duration-200" />
                 </motion.div>
             </div>
