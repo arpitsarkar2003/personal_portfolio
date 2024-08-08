@@ -38,7 +38,7 @@ const About = () => {
                     </p>
                     <div className="flex space-x-3 items-center ">
                          
-                            <form method="get" action="Resume.pdf" className="flex items-center justify-center space-x-1 cursor-pointer border px-3 py-[7px] rounded-md hover:bg-gray-100 transition-all duration-150">
+                            <form method="get" action="Resume.pdf" className="flex items-center justify-center space-x-1 cursor-pointer border px-3 py-[7px] rounded-md hover:bg-gray-100 transition-all duration-150 bg-white">
                             <Paperclip className="w-6 h-6" />
                             <button type="submit" >Resume</button>
                         </form>
@@ -78,12 +78,13 @@ const About = () => {
                         As a Front-End Web Developer, I excel in creating stunning, responsive websites using HTML, CSS (especially Tailwind CSS), and JavaScript/React.js for dynamic interfaces. I also handle backend tasks with MongoDB/Express and excel in API integration. My toolkit includes advanced tools like Firebase, Redux, and Material UI/Icons for high-performance web apps.
                     </p>
                     <div className="items-center pt-10 space-x-1 grid grid-cols-2 gap-3 mx-5">
-                    <form method="get" action="Resume.pdf" className="flex items-center justify-center space-x-1 cursor-pointer border px-3 py-[7px] rounded-md hover:bg-gray-100 transition-all duration-150">
+                    <form method="get" action="Resume.pdf" className="flex items-center justify-center space-x-1 cursor-pointer border px-3 py-[7px] rounded-md hover:bg-gray-100 transition-all duration-150 bg-white">
                             <Paperclip className="w-6 h-6" />
                             <button type="submit" >Resume</button>
                         </form>
+                        
                         <Button variant="outline">
-                            <a href="https://www.linkedin.com/in/arpitsarkar07/" target="_blank" className="flex items-center space-x-1">
+                            <a href="https://www.linkedin.com/in/arpitsarkar07/" target="_blank" className="flex items-center space-x-1 ">
                                 <Linkedin />
                                 <span>Linkden</span>
                             </a>

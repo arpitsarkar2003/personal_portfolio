@@ -9,7 +9,7 @@ import Work from "./components/Work";
 
 export default function Home() {
   return (
-    <div className="border-t-4 border-black dark:border-white dark:bg-darkBackground">
+    <div className="border-t-4 border-black dark:border-white dark:bg-darkBackground bg-[#FFFFF0]">
 
       {/* header */}
       <div id="Header" className="md:h-[90vh] md:pb-0 pb-10 border-b dark:border-white">
