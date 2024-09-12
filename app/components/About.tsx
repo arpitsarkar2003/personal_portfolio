@@ -130,21 +130,21 @@ const About = () => {
 
             </div>
 
-            <div className="md:hidden flex flex-col p-5 space-y-5  justify-between md:mx-[20%] mt-10">
-                <div className="bg-gray-100 flex border  dark:bg-white/70 dark:text-black border-gray-100 rounded-md hover:bg-gray-50 hover:shadow-sm cursor-default py-1 px-3 space-x-2">
-                    <img src="1.svg" alt="Engineering" />
+            <div className="md:hidden flex p-5 space-y-5 justify-center items-center md:mx-[20%] mt-10 text-sm">
+                <div className="flex items-center pt-6 dark:bg-white/70 dark:text-black border-gray-100 rounded-md hover:bg-gray-50 hover:shadow-sm cursor-default py-1 px-3 space-x-2">
+                    <img src="1.svg" alt="Engineering" className="w-5" />
                     <div className="border-l-2 pl-2 border-gray-500">
                         <h1>Designer</h1>
                     </div>
                 </div>
-                <div className="bg-gray-100 flex border dark:bg-white/70 dark:text-black border-gray-100 rounded-md hover:bg-gray-50 hover:shadow-sm cursor-default py-1 px-3 space-x-2">
-                    <img src="2.svg" alt="Engineering" />
+                <div className="flex items-center dark:bg-white/70 dark:text-black border-gray-100 rounded-md hover:bg-gray-50 hover:shadow-sm cursor-default py-1 px-3 space-x-2">
+                    <img src="2.svg" alt="Engineering"  className="w-5"/>
                     <div className="border-l-2 pl-2 border-gray-500">
                         <h1>Engineering</h1>
                     </div>
                 </div>
-                <div className="bg-gray-100 flex border dark:bg-white/70 dark:text-black border-gray-100 rounded-md hover:bg-gray-50 hover:shadow-sm cursor-default py-1 px-3 space-x-2">
-                    <img src="3.svg" alt="Engineering" />
+                <div className="flex items-center dark:bg-white/70 dark:text-black border-gray-100 rounded-md hover:bg-gray-50 hover:shadow-sm cursor-default py-1 px-3 space-x-2">
+                    <img src="3.svg" alt="Engineering"  className="w-5"/>
                     <div className="border-l-2 pl-2 border-gray-500">
                         <h1>Project Management</h1>
                     </div>

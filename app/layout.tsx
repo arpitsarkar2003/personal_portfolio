@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
-import { Zilla_Slab } from "next/font/google";
 import "./globals.css";
 
-
-const roboto = Zilla_Slab({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-})
 
 export const metadata: Metadata = {
   title: "Arpit Sarkar",
@@ -20,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-           <body className={roboto.className}>{children}</body>
+           <body>{children}</body>
     </html>
   );
 }
