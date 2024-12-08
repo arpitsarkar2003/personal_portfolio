@@ -23,7 +23,7 @@ const Header = () => {
                     </div>
                     <span>|</span>
                     <div>
-                        <a href="https://docs.google.com/document/d/1sa6oxyCMZ-9pAa59O49k6lfU4agjY1oaOPRUi7tlYmY/edit?usp=sharing"
+                        <a href="https://docs.google.com/document/d/1U5HJpL6A3xwy_d2jH6u0mbdFvjuX2SDaybbW2KdwQ4o/edit?usp=sharing"
                             target="_blank"
                             className="font-[500]">My Resume</a>
                         <div className="w-[20px] h-[2px] dark:border-white border border-black group-hover:w-full transition-all duration-200" />
@@ -49,7 +49,7 @@ const Header = () => {
                     </div>
                     <span>|</span>
                     <div>
-                        <a href="https://docs.google.com/document/d/1sa6oxyCMZ-9pAa59O49k6lfU4agjY1oaOPRUi7tlYmY/edit?usp=sharing"
+                        <a href="https://docs.google.com/document/d/1U5HJpL6A3xwy_d2jH6u0mbdFvjuX2SDaybbW2KdwQ4o/edit?usp=sharing"
                             target="_blank"
                             className="font-[500]">My Resume</a>
                         <div className="w-[20px] h-[2px] dark:border-white border border-black group-hover:w-full transition-all duration-200" />

@@ -2,20 +2,11 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { work } from "../../lib/work-exp";
 
-const work = [
-    {
-        id: 1,
-        name_company: "Techplement",
-        role: "Front-End Developer - Intern",
-        date: "August 2024 - September 2024",
-        company_logo: `https://via.placeholder.com/300x200?text=Techplement`,
-        description: "Worked on various front-end projects, contributing to UI/UX development and enhancing website responsiveness."
-    }
-];
-
-// @ts-ignore
-const formatDuration = (startDateStr, endDateStr = new Date().toLocaleDateString()) => {
+const formatDuration = (startDateStr: string, endDateStr: string = new Date().toLocaleDateString()) => {
     const start = new Date(startDateStr);
     const end = new Date(endDateStr);
 
@@ -27,8 +18,12 @@ const formatDuration = (startDateStr, endDateStr = new Date().toLocaleDateString
         months += 12;
     }
 
-    if (years === 0 && months < 0) {
-        return `${Math.abs(months)} month${Math.abs(months) === 1 ? '' : 's'}`;
+    if (years === 0 && months === 0) {
+        return "Less than a month";
+    }
+
+    if (years === 0) {
+        return `${months} month${months > 1 ? 's' : ''}`;
     }
 
     const yearsText = years > 0 ? `${years} year${years > 1 ? 's' : ''}` : '';
@@ -37,55 +32,73 @@ const formatDuration = (startDateStr, endDateStr = new Date().toLocaleDateString
     return [yearsText, monthsText].filter(Boolean).join(' and ');
 };
 
-work.forEach(item => {
+const sortedWork = work.sort((a, b) => {
+    const dateA = new Date(a.date.split(' - ')[1] || a.date.split(' - ')[0]);
+    const dateB = new Date(b.date.split(' - ')[1] || b.date.split(' - ')[0]);
+    return dateB.getTime() - dateA.getTime();
+});
+
+sortedWork.forEach(item => {
     const [startDate, endDate] = item.date.split(' - ');
     // @ts-ignore
-    item.time = formatDuration(startDate, endDate);
+    item.time = formatDuration(startDate, endDate || new Date().toLocaleDateString());
 });
 
 const Work = () => {
     return (
-        <div className="container">
-            <div className="flex md:justify-start mx-20 justify-center pt-12">
-                <motion.div
-                    animate={{ x: -100 }}
-                    transition={{ type: "spring", stiffness: 100 }}
-                    className="group hidden md:block">
-                    <h1 className="text-[36px] font-[700]">My Work Experiences</h1>
-                    <div className="w-[20px] h-[2px] dark:border-white border-2 border-black group-hover:w-full transition-all duration-200" />
-                </motion.div>
-                <div className="group block md:hidden pb-10">
-                    <h1 className="text-[36px] font-[700]">My Work Experiences</h1>
-                    <div className="w-[20px] h-[2px] dark:border-white border-2 border-black group-hover:w-full transition-all duration-200" />
-                </div>
-            </div>
-            <div className="work-experience flex flex-col md:flex-row md:flex-wrap justify-center items-center mt-10">
-                {work.map((item) => (
-                    <div key={item.id} className="experience-card w-full md:w-[45%] bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 m-4">
-                        <div className="flex items-center space-x-4">
-                            {item.company_logo && (
-                                <Image
-                                    src={item.company_logo}
-                                    alt={`${item.name_company} logo`}
-                                    width={50}
-                                    height={50}
-                                    className="object-contain rounded-full"
-                                />
-                            )}
-                            <div>
-                                <h2 className="text-xl font-semibold">{item.name_company}</h2>
-                                <p className="text-gray-500">{item.role}</p>
-                            </div>
-                        </div>
-                        <div className="mt-4">
-                            <p className="text-gray-700 dark:text-gray-300">{item.description}</p>
-                            <div className="flex justify-between items-center mt-4">
-                                <span className="text-gray-500">{item.date}</span>
-                                 {/* @ts-ignore */}
-                                <span className="text-gray-500">{item.time}</span>
-                            </div>
-                        </div>
-                    </div>
+        <div className="container mx-auto px-4 py-16">
+            <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-center mb-12"
+            >
+                <h1 className="text-4xl font-bold mb-2">My Work Experiences</h1>
+                <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
+            </motion.div>
+            <div className="grid grid-cols-1 gap-8">
+                {sortedWork.map((item, index) => (
+                    <motion.div
+                        key={item.id}
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.2 }}
+                    >
+                        <Card className="overflow-hidden">
+                            <CardHeader className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-4 pb-2">
+                                <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                                    <img
+                                        src={item.company_logo}
+                                        alt={`${item.name_company} logo`}
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <div className="flex-grow">
+                                    <CardTitle className="text-2xl">{item.name_company}</CardTitle>
+                                    <p className="text-lg text-muted-foreground">{item.role}</p>
+                                </div>
+                                <div className="flex flex-col items-end">
+                                    <Badge variant="outline" className="mb-2">{item.date}</Badge>
+                                </div>
+                            </CardHeader>
+                            <CardContent>
+                                <p className="text-muted-foreground mb-4">{item.description}</p>
+                                <ul className="list-disc pl-5 space-y-2">
+                                    {item.achievements.map((achievement, i) => (
+                                        <motion.li 
+                                            key={i}
+                                            initial={{ opacity: 0, x: -20 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ delay: 0.5 + (i * 0.1) }}
+                                            className="text-sm"
+                                        >
+                                            {achievement}
+                                        </motion.li>
+                                    ))}
+                                </ul>
+                            </CardContent>
+                        </Card>
+                    </motion.div>
                 ))}
             </div>
         </div>
@@ -93,3 +106,4 @@ const Work = () => {
 }
 
 export default Work;
+

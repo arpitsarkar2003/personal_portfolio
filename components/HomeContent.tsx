@@ -4,7 +4,7 @@ import React from 'react';
 
 const HomeContent: React.FC = () => {
     const texts = [
-        'Front-end.web(Developer)',
+        'Full Stack.web(Developer)',
         'Let\'s Innovate Together',
         '<Pixel Magicians />',
     ];
